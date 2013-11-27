@@ -1,12 +1,13 @@
 class CreateCampaigns < ActiveRecord::Migration
   def change
-    create_table :campaigns do |t|
+    create_table :campaigns, {:force => true} do |t|
       t.string :name
       t.text :description
       t.date :start_time
       t.date :finish_time
       t.decimal :donation_amount
-      t.string :reward
+      t.interger :reward_id
+      
 
       t.timestamps
     end

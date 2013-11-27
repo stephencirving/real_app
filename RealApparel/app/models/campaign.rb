@@ -4,4 +4,6 @@ class Campaign < ActiveRecord::Base
 #Put this into the table (I think)    
 #collection_select(:post, :author_id, Author.all, :id, :name_with_initial, :prompt => true)
 
+belongs_to :user
+
 end

@@ -6,6 +6,8 @@ source 'https://rubygems.org'
     gem 'less-rails'
   end
 
+  gem 'devise'
+
   gem 'twitter-bootstrap-rails'
 
   gem 'libv8'

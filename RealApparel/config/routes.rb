@@ -1,4 +1,5 @@
 Campaigns::Application.routes.draw do
+  devise_for :users
   root 'campaigns#index'
   resources :campaigns
   # The priority is based upon order of creation: first created -> highest priority.

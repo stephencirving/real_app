@@ -92,8 +92,8 @@
           <a class="brand" href="#">Real Apparel</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Home", "/"  %></li>
-              <li><%= link_to "New Campaign", "/new"  %></li>
+              <li><%= link_to "Home", "/campaigns"  %></li>
+              <li><%= link_to "New Campaign", "/campaigns/new"  %></li>
               <li><%= link_to "Contact", "/path3"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -108,14 +108,7 @@
             <%= yield %>
           </div>
           <div class="span3">
-            <div class="well sidebar-nav">
-              <h3>Real Apparel</h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Home", "/"  %></li>
-                <li><%= link_to "Create New", "/campaigns/new"  %></li>
-              </ul>
-            </div><!--/.well -->
+            
           </div><!--/span-->
         </div><!--/row-->
 

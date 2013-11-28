@@ -4,6 +4,13 @@ class Campaign < ActiveRecord::Base
 #Put this into the table (I think)    
 #collection_select(:post, :author_id, Author.all, :id, :name_with_initial, :prompt => true)
 
-belongs_to :user
 
+validates :name, :presence => true
+validates :description, :presence => true
+validates :start_time, :presence => true
+validates :finish_time, :presence => true
+validates :donation_amount, :presence => true
+
+
+belongs_to :user
 end

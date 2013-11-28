@@ -1,3 +1,15 @@
+`<% if @campaign.errors.any? %>
+
+
+  <ul class="alert alert-warning">
+    <p><strong>Please fill in ALL fields, you are missing:</strong></p>
+
+    <% @campaign.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @campaign, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
@@ -30,15 +42,20 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :reward_id, :class => 'control-label' %>
+    <%= f.label 'Reward', :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :reward_id, :class => 'text_field' %>
+      <%= collection_select(:reward_id, Reward.all, :id, :name, prompt: true) %>
     </div>
   </div>
+
+
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                campaigns_path, :class => 'btn' %>
+    
+    campaigns_path, :class => 'btn' %>
+
   </div>
 <% end %>

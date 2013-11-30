@@ -11,6 +11,8 @@ validates :start_time, :presence => true
 validates :finish_time, :presence => true
 validates :donation_amount, :presence => true
 
+  has_many :orders
+  belongs_to :user
+  belongs_to :reward
 
-belongs_to :user
 end

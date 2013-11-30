@@ -44,8 +44,7 @@
   <div class="control-group">
     <%= f.label 'Reward', :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :reward_id, :class => 'text_field' %>
-      <%= collection_select(:reward_id, Reward.all, :id, :name, prompt: true) %>
+      <%= f.collection_select :reward_id, Reward.all, :id, :name, prompt: true %>
     </div>
   </div>
 

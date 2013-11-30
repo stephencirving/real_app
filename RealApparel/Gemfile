@@ -6,6 +6,8 @@ source 'https://rubygems.org'
     gem 'less-rails'
   end
 
+  gem "paperclip"
+
   gem 'devise'
 
   gem 'twitter-bootstrap-rails'

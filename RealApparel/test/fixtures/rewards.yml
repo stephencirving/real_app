@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  manufacture: MyString
+  decimal: 
+
+two:
+  name: MyString
+  manufacture: MyString
+  decimal: 

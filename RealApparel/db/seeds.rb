@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Reward.create!(:name => "Hanes Junior's Classic T - White", :manufacture => "Hanes", :min_order_price_per_unit => "2.25")

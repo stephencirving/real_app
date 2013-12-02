@@ -38,21 +38,6 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixe-top">
-      <div class="navbar-inner">
-          <div class="pull-left">
-            <% if user_signed_in? %>
-              <span>logged in as <%= current_user.email %></span>
-              <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
-              <% else %>
-              <%= link_to 'login', new_user_session_path %>                    
-            <% end %>
-            <p><%= flash[:notice] %></p>
-            <p><%= flash[:error] %></p>
-          </div>
-      </div>
-    </div>
-
 
     <div class="navbar navbar-fixe-top">
       <div class="navbar-inner">
@@ -76,6 +61,22 @@
             </ul>
           </div><!--/.nav-collapse -->
         </div>
+      </div>
+    </div>
+
+    
+    <div class="navbar navbar-fixe-top">
+      <div class="navbar-inner">
+          <div class="pull-left">
+            <% if user_signed_in? %>
+              <span>logged in as <%= current_user.email %></span>
+              <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+              <% else %>
+              <%= link_to 'login', new_user_session_path %>                    
+            <% end %>
+            <p><%= flash[:notice] %></p>
+            <p><%= flash[:error] %></p>
+          </div>
       </div>
     </div>
 

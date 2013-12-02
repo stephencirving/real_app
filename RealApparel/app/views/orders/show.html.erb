@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @order.campaign_id %>
+</p>
+
+<p>
+  <strong>Order date and time:</strong>
+  <%= @order.order_date_and_time %>
+</p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @order.customer_name %>
+</p>
+
+<p>
+  <strong>Customer email:</strong>
+  <%= @order.customer_email %>
+</p>
+
+<p>
+  <strong>Reward size:</strong>
+  <%= @order.reward_size %>
+</p>
+
+<p>
+  <strong>Shipping choice:</strong>
+  <%= @order.shipping_choice %>
+</p>
+
+<p>
+  <strong>Customer address:</strong>
+  <%= @order.customer_address %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @order.customer_address %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

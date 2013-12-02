@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  campaign_id: 
+  order_date_and_time: 2013-12-02 16:45:59
+  customer_name: MyString
+  customer_email: 
+  reward_size: 
+  shipping_choice: 
+  customer_address: MyString
+
+two:
+  campaign_id: 
+  order_date_and_time: 2013-12-02 16:45:59
+  customer_name: MyString
+  customer_email: 
+  reward_size: 
+  shipping_choice: 
+  customer_address: MyString

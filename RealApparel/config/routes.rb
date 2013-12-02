@@ -1,4 +1,6 @@
 Campaigns::Application.routes.draw do
+  resources :orders
+
   devise_for :users
   root :to => 'campaigns#index'
   resources :campaigns

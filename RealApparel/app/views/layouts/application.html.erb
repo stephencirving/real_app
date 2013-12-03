@@ -44,30 +44,7 @@
 
 
 
-
-
-    <div class="container full-width>
-      <div class="navbar-header">
-          <div class="pull-left">
-
-            <p><%= flash[:notice] %></p>
-
-            <% if user_signed_in? %>
-              <span>logged in as <%= current_user.email %></span>
-              <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
-              <%= link_to "Your Campaigns", "/profile"  %>
-              <% else %>
-              <%= link_to 'login', new_user_session_path %>                    
-            <% end %>
-
-            <p><%= flash[:error] %></p>
-
-          </div>
-      </div>
-    </div>
-
-
-    <div class="navbar navbar-fixe-top">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">      
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -83,12 +60,27 @@
               <li><%= link_to "Current Campaigns", "/campaigns"  %></li>
               <li><%= link_to "Add a Reward", "/rewards/new"  %></li>
               <li><%= link_to "Available Rewards", "/rewards"  %></li>
+              <li>
+                <div class="pull-right">
+                  <p><%= flash[:notice] %></p>
+                    <% if user_signed_in? %>
+                      <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+                      <span> Signed in as: <%= current_user.email %></span> 
+                      <%= link_to "Your Campaigns", "/profile"  %>
+                      <% else %>
+                      <%= link_to 'login', new_user_session_path %>                    
+                    <% end %>
+                  <p><%= flash[:error] %></p>
+
+                </div>
+              </li>
 
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
 
     
     <div class="container">

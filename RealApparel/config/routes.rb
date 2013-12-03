@@ -1,10 +1,14 @@
 Campaigns::Application.routes.draw do
-  resources :orders
+  root :to => 'campaigns#index'
 
   devise_for :users
-  root :to => 'campaigns#index'
+
+  get 'profile' =>'users#profile'
+
+  resources :orders
   resources :campaigns
   resources :rewards
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -10,6 +10,7 @@ validates :description, :presence => true
 validates :start_time, :presence => true
 validates :finish_time, :presence => true
 validates :donation_amount, :presence => true
+validates :reward_id, :presence => true
 
   has_many :orders
   belongs_to :user

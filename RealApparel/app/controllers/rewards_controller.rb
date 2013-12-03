@@ -1,6 +1,7 @@
 class RewardsController < ApplicationController
   before_action :set_reward, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :only => [:new, :create]
+  
   # GET /rewards
   # GET /rewards.json
   def index
@@ -69,6 +70,6 @@ class RewardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reward_params
-      params.require(:reward).permit(:name, :manufacture, :decimal)
+      params.require(:reward).permit(:name, :manufacture, :min_order_price_per_unit, :minimum_order, :reward_image)
     end
 end

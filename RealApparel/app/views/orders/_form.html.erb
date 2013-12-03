@@ -11,39 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :campaign_id %><br>
-    <%= f.text_field :campaign_id %>
-  </div>
-  <div class="field">
-    <%= f.label :order_date_and_time %><br>
-    <%= f.datetime_select :order_date_and_time %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_name %><br>
-    <%= f.text_field :customer_name %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_email %><br>
-    <%= f.text_field :customer_email %>
-  </div>
-  <div class="field">
-    <%= f.label :reward_size %><br>
-    <%= f.text_field :reward_size %>
-  </div>
-  <div class="field">
-    <%= f.label :shipping_choice %><br>
-    <%= f.text_field :shipping_choice %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_address %><br>
-    <%= f.text_field :customer_address %>
-  </div>
-  <div class="field">
-    <%= f.label :postcode %><br>
-    <%= f.text_field :postcode %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+          <div class="field">
+            <%= f.label :campaign_id %><br>
+            <%= f.text_field :campaign_id %>
+          </div>
+          <div class="field">
+            <%= f.label :order_date_and_time %><br>
+            <%= f.datetime_select :order_date_and_time %>
+          </div>
+          <div class="field">
+            <%= f.label :customer_name %><br>
+            <%= f.text_field :customer_name %>
+          </div>
+          <div class="field">
+            <%= f.label :customer_email %><br>
+            <%= f.text_field :customer_email %>
+          </div>
+          <div class="field">
+            <%= f.label :reward_size %><br>
+            <%= f.text_field :reward_size %>
+          </div>
+          <div class="field">
+            <%= f.label :shipping_choice %><br>
+            <%= f.select :shipping_choice %>
+          </div>
+          <div class="field">
+            <%= f.label :customer_address %><br>
+            <%= f.text_field :customer_address %>
+          </div>
+          <div class="field">
+            <%= f.label :postcode %><br>
+            <%= f.text_field :postcode %>
+          </div>
+          <div class="field">
+            <%= f.label :shipping_price %><br>
+            <%= f.text_field :shipping_price %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>

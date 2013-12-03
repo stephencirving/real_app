@@ -27,6 +27,7 @@
         <td><%= order.shipping_choice %></td>
         <td><%= order.customer_address %></td>
         <td><%= order.postcode %></td>
+        <td><%= order.shipping_price %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>

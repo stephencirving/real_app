@@ -1,13 +1,12 @@
-<%- model_class = Campaign -%>
+<% model_class = Campaign %>
 
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= @campaign.name %></h1>
+
 </div>
 
     <dl class="dl-horizontal">
 
-      <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-      <dd><%= @campaign.name %></dd>
 
       <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
       <dd><%= @campaign.description %></dd>
@@ -15,15 +14,20 @@
       <dt><strong><%= model_class.human_attribute_name(:start_time) %>:</strong></dt>
       <dd><%= @start_time %></dd>
 
+      <dt><strong><%= model_class.human_attribute_name(:end_time) %>:</strong></dt>
+      <dd><%= @end_time %></dd>
+
+
+
     </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              rewards_path, :class => 'btn'  %>
+              campaigns_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_reward_path(@reward), :class => 'btn' %>
+              edit_campaign_path(@reward), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              reward_path(@reward),
+              campaign_path(@campaign),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

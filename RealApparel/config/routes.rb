@@ -1,5 +1,5 @@
 Campaigns::Application.routes.draw do
-  root :to => 'campaigns#index'
+  root 'welcome#index'
 
   devise_for :users
 

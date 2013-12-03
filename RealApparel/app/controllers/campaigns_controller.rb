@@ -12,7 +12,9 @@ class CampaignsController < ApplicationController
   # GET /campaigns/1
   # GET /campaigns/1.json
   def show
+    @campaigns = Campaign.find params[:id]
   end
+  #I SET THIS!!!!!!!!!!!!!!!!!
 
   # GET /campaigns/new
   def new

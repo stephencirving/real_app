@@ -23,6 +23,7 @@ class CampaignsController < ApplicationController
 
   # GET /campaigns/1/edit
   def edit
+        @campaigns = Campaign.find params[:id]
   end
 
 
